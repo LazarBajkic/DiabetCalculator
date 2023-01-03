@@ -61,27 +61,37 @@ public class CarbsPick extends JFrame implements ActionListener{
        JComboBox cb2=(JComboBox)e.getSource();
        String carbType=(String)cb.getSelectedItem();
        String breadType=(String)cb2.getSelectedItem();
-       if(carbType.equals("Bread")){
+       
+       if(carbType.equals("Potatoes")){
+            perPortion.setText("Per portion: 10g");
+            valueOfType.setText("Per 100g: 17g");
+            typeOfBread.setVisible(false);
+
+       }    else if(carbType.equals("Rice")){
+                perPortion.setText("Per prtion: 10g");
+                valueOfType.setText("Per 100g: 100g");
+                typeOfBread.setVisible(false);
+
+
+       } else if(carbType.equals("Bread")){
+        
         if(breadType.equals("White")){
             perPortion.setText("15g");
-        valueOfType.setText("50g");
-        }else if(breadType.equals("Wholemeal")){
-            perPortion.setText("15g");
-            valueOfType.setText("42g");
-        }else if(breadType.equals("Rye")){
-            perPortion.setText("16g");
-            valueOfType.setText("46g");
-        }else if(breadType.equals("Granary")){
-            perPortion.setText("15g");
-            valueOfType.setText("46g");
+            valueOfType.setText("50g");
+        }
+            else if(breadType.equals("Wholemeal")){
+                perPortion.setText("15g");
+                valueOfType.setText("42g");
+        }
+            else if(breadType.equals("Rye")){
+                perPortion.setText("16g");
+                valueOfType.setText("46g");
+        }
+        else if(breadType.equals("Granary")){
+                perPortion.setText("15g");
+                valueOfType.setText("46g");
         }
         typeOfBread.setVisible(true);
-       }else if(carbType.equals("Potatoes")){
-        perPortion.setText("Per portion: 10g");
-        valueOfType.setText("Per 100g: 17g");
-       }else if(carbType.equals("Rice")){
-        perPortion.setText("Per prtion: 10g");
-            valueOfType.setText("Per 100g: 100g");
-       }
     }
+}
 }
