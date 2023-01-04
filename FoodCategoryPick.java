@@ -97,7 +97,9 @@ public class FoodCategoryPick extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==carbsBtn){
-            CarbsPick carbsPick=new CarbsPick();
+            CarbsPick CP=new CarbsPick();
+        }else if(e.getSource()==veggieBtn){
+            VeggiePick VP=new VeggiePick();
         }
     }
 
