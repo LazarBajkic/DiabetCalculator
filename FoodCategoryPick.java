@@ -1,10 +1,13 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class FoodCategoryPick extends JFrame{
+public class FoodCategoryPick extends JFrame implements ActionListener{
     
     JButton veggieBtn=new JButton();
     JButton fruitBtn=new JButton();
@@ -13,6 +16,7 @@ public class FoodCategoryPick extends JFrame{
     JButton meatBtn=new JButton();
     JButton finalizeBtn=new JButton();
     JLabel optional=new JLabel();
+    
 
     FoodCategoryPick(){
         this.setSize(250,500);
@@ -24,18 +28,20 @@ public class FoodCategoryPick extends JFrame{
         veggieBtn.setSize(130,25);
         veggieBtn.setLocation(50, 50);
         veggieBtn.setFocusable(false);
-        veggieBtn.setFont(new Font("Tahoma",Font.BOLD,13));
-        veggieBtn.setText("Pick a Veggie");
+        veggieBtn.setFont(new Font("Tahoma",Font.BOLD,10));
+        veggieBtn.setText("Pick your veggies");
         veggieBtn.setBackground(Color.black);
         veggieBtn.setForeground(Color.ORANGE);
+        veggieBtn.addActionListener(this);
 
         fruitBtn.setSize(130,25);
         fruitBtn.setLocation(50, 100);
         fruitBtn.setFocusable(false);
         fruitBtn.setFont(new Font("Tahoma",Font.BOLD,13));
-        fruitBtn.setText("Pick a fruit");
+        fruitBtn.setText("Pick your fruit");
         fruitBtn.setBackground(Color.black);
         fruitBtn.setForeground(Color.orange);
+        fruitBtn.addActionListener(this);
 
         carbsBtn.setSize(130,25);
         carbsBtn.setLocation(50, 150);
@@ -44,6 +50,7 @@ public class FoodCategoryPick extends JFrame{
         carbsBtn.setText("Pick your carbs");
         carbsBtn.setBackground(Color.black);
         carbsBtn.setForeground(Color.orange);
+        carbsBtn.addActionListener(this);
 
         optional.setText("optional:");
         optional.setSize(70, 25);
@@ -57,6 +64,7 @@ public class FoodCategoryPick extends JFrame{
         sugarsBtn.setText("Pick your sugars");
         sugarsBtn.setBackground(Color.black);
         sugarsBtn.setForeground(Color.orange);
+        sugarsBtn.addActionListener(this);
 
         meatBtn.setSize(130,25);
         meatBtn.setLocation(50, 260);
@@ -65,6 +73,7 @@ public class FoodCategoryPick extends JFrame{
         meatBtn.setText("Pick your meat");
         meatBtn.setBackground(Color.black);
         meatBtn.setForeground(Color.orange);
+        meatBtn.addActionListener(this);
 
         finalizeBtn.setSize(160,25);
         finalizeBtn.setLocation(36, 350);
@@ -73,10 +82,7 @@ public class FoodCategoryPick extends JFrame{
         finalizeBtn.setText("Finalize and calculate");
         finalizeBtn.setBackground(Color.black);
         finalizeBtn.setForeground(Color.orange);
-
-
-
-
+        finalizeBtn.addActionListener(this);
 
         this.add(veggieBtn);
         this.add(fruitBtn);
@@ -85,6 +91,14 @@ public class FoodCategoryPick extends JFrame{
         this.add(sugarsBtn);
         this.add(meatBtn);
         this.add(finalizeBtn);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        if(e.getSource()==carbsBtn){
+            CarbsPick carbsPick=new CarbsPick();
+        }
     }
 
 }   

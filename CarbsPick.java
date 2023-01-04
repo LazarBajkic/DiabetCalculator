@@ -23,7 +23,7 @@ public class CarbsPick extends JFrame implements ActionListener{
         this.setResizable(false);
 
         typeOfCarb.setSize(100,25);
-        typeOfCarb.setLocation(50, 50);
+        typeOfCarb.setLocation(200, 75);
         typeOfCarb.setSelectedIndex(0);
         typeOfCarb.addActionListener(this);
 
@@ -34,7 +34,7 @@ public class CarbsPick extends JFrame implements ActionListener{
         perPortion.setSize(400, 30);
         perPortion.setLocation(50,200);
         perPortion.setFont(new Font("Tahoma",Font.BOLD,12));
-
+        
         this.add(typeOfCarb);
         this.add(valueOfType);
         this.add(perPortion);
