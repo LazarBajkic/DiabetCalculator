@@ -12,7 +12,6 @@ public class CarbsPick extends JFrame implements ActionListener{
     JComboBox typeOfCarb=new JComboBox(carbTypes);
     JLabel per100Grams=new JLabel();
     JLabel perPortion=new JLabel();
-    JLabel valueOfType=new JLabel();
 
     CarbsPick(){
 
@@ -27,16 +26,16 @@ public class CarbsPick extends JFrame implements ActionListener{
         typeOfCarb.setSelectedIndex(0);
         typeOfCarb.addActionListener(this);
 
-        valueOfType.setSize(400,30);
-        valueOfType.setLocation(50,150);
-        valueOfType.setFont(new Font("Tahoma",Font.BOLD,12));
+        per100Grams.setSize(400,30);
+        per100Grams.setLocation(50,150);
+        per100Grams.setFont(new Font("Tahoma",Font.BOLD,12));
 
         perPortion.setSize(400, 30);
         perPortion.setLocation(50,200);
         perPortion.setFont(new Font("Tahoma",Font.BOLD,12));
         
         this.add(typeOfCarb);
-        this.add(valueOfType);
+        this.add(per100Grams);
         this.add(perPortion);
     }
 
@@ -49,15 +48,15 @@ public class CarbsPick extends JFrame implements ActionListener{
 
        if(carbType.equals("Potatoes")){
             perPortion.setText("Per portion: 10g");
-            valueOfType.setText("Per 100g: 17g");
+            per100Grams.setText("Per 100g: 17g");
 
        }    else if(carbType.equals("Rice")){
                 perPortion.setText("Per prtion: 10g");
-                valueOfType.setText("Per 100g: 100g");
+                per100Grams.setText("Per 100g: 100g");
 
        }    else if(carbType.equals("Bread")){
             perPortion.setText("Per portion White/Wholemeal/Rye/Granary: 15g/15g/16g/15g");
-            valueOfType.setText("Per 100g White/Wholemeal/Rye/Granary: 50g/42g/46g/46g");
+            per100Grams.setText("Per 100g White/Wholemeal/Rye/Granary: 50g/42g/46g/46g");
         }
 
     }
