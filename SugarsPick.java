@@ -30,7 +30,7 @@ public class SugarsPick extends JFrame implements ActionListener {
         per100g.setFont(new Font("Tahoma",Font.BOLD,12));
 
         sugarInfo.setSize(150, 150);
-        sugarInfo.setLocation(10,250);
+        sugarInfo.setLocation(10,300);
         sugarInfo.setFont(new Font("Tahoma",Font.BOLD,12));
 
         this.add(typeOfSugar);
