@@ -106,6 +106,14 @@ public class FoodCategoryPick extends JFrame implements ActionListener{
             else if(e.getSource()==carbsBtn){
                 CarbsPick CP=new CarbsPick();
             }
+
+            else if(e.getSource()==sugarsBtn){
+                SugarsPick SP=new SugarsPick();
+            }
+
+            else if(e.getSource()==meatBtn){
+                MeatPick MP=new MeatPick();
+            }
     }
 
 }   
