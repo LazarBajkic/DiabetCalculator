@@ -84,5 +84,10 @@ public class SugarsPick extends JFrame implements ActionListener {
             break;
         }
         
+        String pick=yourChoice.getText();
+        FinalizationAndCalculation obj=new FinalizationAndCalculation();
+        obj.myUpdateSugar(pick);
+        obj.setVisible(true);
+
     }   
 }

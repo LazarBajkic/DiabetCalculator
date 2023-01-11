@@ -91,6 +91,10 @@ public class VeggiePick extends JFrame implements ActionListener{
                 yourChoice.setText("You chose: Turnip");
                 break;
         }
+        String pick=yourChoice.getText();
+        FinalizationAndCalculation obj=new FinalizationAndCalculation();
+        obj.myUpdateVeggie(pick);
+        obj.setVisible(true);
 
         }
     }

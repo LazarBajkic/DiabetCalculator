@@ -97,5 +97,11 @@ public class FruitPick extends JFrame implements ActionListener{
         yourChoice.setText("You chose: Strawberries");
         break;
        }
+
+       String pick=yourChoice.getText();
+       FinalizationAndCalculation obj=new FinalizationAndCalculation();
+       obj.myUpdateFruit(pick);
+       obj.setVisible(true);
+
     }
 }

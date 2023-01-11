@@ -105,10 +105,9 @@ public class CarbsPick extends JFrame implements ActionListener{
         break;
 
        }
-       String pick=yourChoice.getText();
-       FinalizationAndCalculation obj=new FinalizationAndCalculation();
-       obj.myUpdate(pick);
-       obj.setVisible(true);
+        String pick=yourChoice.getText();
+        FinalizationAndCalculation obj=new FinalizationAndCalculation();
+        obj.myUpdateCarb(pick);
     }
 }
 
