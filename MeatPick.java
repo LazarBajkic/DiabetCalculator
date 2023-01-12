@@ -27,6 +27,7 @@ public class MeatPick extends JFrame implements ActionListener{
         typeOfMeat.setLocation(70,50);
         typeOfMeat.addActionListener(this);
         typeOfMeat.setSelectedIndex(0);
+        typeOfMeat.setSelectedItem(0);
 
         per100g.setSize(150,150);
         per100g.setFont(new Font("Tahoma",Font.BOLD,12));
@@ -52,6 +53,8 @@ public class MeatPick extends JFrame implements ActionListener{
         this.add(yourChoice);
         this.add(meatStats);
     }
+
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -84,10 +87,15 @@ public class MeatPick extends JFrame implements ActionListener{
             break;
         }
 
-        String pick=yourChoice.getText();
+
         FinalizationAndCalculation obj=new FinalizationAndCalculation();
+        String pick=yourChoice.getText();
         obj.myUpdateMeat(pick);
         obj.setVisible(true);
-
+        obj.dispose();
+    }
+    
+    public String ReturnMeat(){
+        return yourChoice.getText();
     }
 }

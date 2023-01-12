@@ -112,14 +112,39 @@ public class FoodCategoryPick extends JFrame implements ActionListener{
 
             else if(e.getSource()==sugarsBtn){
                 SugarsPick SP=new SugarsPick();
+                this.dispose();
             }
 
             else if(e.getSource()==meatBtn){
                 MeatPick MP=new MeatPick();
+                this.dispose();
             }
 
             else if(e.getSource()==finalizeBtn){
+                MeatPick MP=new MeatPick();
+                VeggiePick VP=new VeggiePick();
+                SugarsPick SP=new SugarsPick();
+                CarbsPick CP=new CarbsPick();
+                FruitPick FP=new FruitPick();
                 FinalizationAndCalculation FAC=new FinalizationAndCalculation();
+
+                String SC=SP.returnSugar();
+                String FC=FP.fruitReturn();
+                String MC=MP.ReturnMeat();
+                String VC=VP.veggieReturn();
+                String CC=CP.carbReturn();
+
+                FAC.myUpdateCarb(CC);
+                FAC.myUpdateFruit(FC);
+                FAC.myUpdateMeat(MC);
+                FAC.myUpdateSugar(SC);
+                FAC.myUpdateVeggie(VC);
+
+                FP.dispose();
+                CP.dispose();
+                SP.dispose();
+                VP.dispose();
+                MP.dispose();
             }
     }
 

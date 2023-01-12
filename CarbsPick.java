@@ -28,6 +28,7 @@ public class CarbsPick extends JFrame implements ActionListener{
         typeOfCarb.setLocation(20, 50);
         typeOfCarb.setSelectedIndex(0);
         typeOfCarb.addActionListener(this);
+        typeOfCarb.setSelectedItem(carbTypes[0]);
 
         per100Grams.setSize(150,150);
         per100Grams.setLocation(10,150);
@@ -52,6 +53,11 @@ public class CarbsPick extends JFrame implements ActionListener{
         this.add(per100Grams);
         this.add(yourChoice);
         this.add(carbStats);
+    }
+
+    public String carbReturn(){
+        String carbChoice=yourChoice.getText();
+        return carbChoice;
     }
 
     @Override
@@ -108,6 +114,8 @@ public class CarbsPick extends JFrame implements ActionListener{
         String pick=yourChoice.getText();
         FinalizationAndCalculation obj=new FinalizationAndCalculation();
         obj.myUpdateCarb(pick);
+        obj.setVisible(true);
+        obj.dispose();
     }
 }
 

@@ -51,18 +51,18 @@ public class FinalizationAndCalculation extends JFrame{
 	}
 
     public void myUpdateFruit(String strFruit) {
-		veggieChoice.setText(strFruit);
+		fruitChoice.setText(strFruit);
 	}
 
     public void myUpdateCarb(String strCarb) {
-		veggieChoice.setText(strCarb);
+		carbsChoice.setText(strCarb);
 	}
 
     public void myUpdateSugar(String strSugar) {
-		veggieChoice.setText(strSugar);
+		sugarsChoice.setText(strSugar);
 	}
 
     public void myUpdateMeat(String strMeat) {
-		veggieChoice.setText(strMeat);
+		meatChoice.setText(strMeat);
 	}
 }

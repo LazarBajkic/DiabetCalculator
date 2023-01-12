@@ -28,6 +28,8 @@ public class VeggiePick extends JFrame implements ActionListener{
         typeOfVeggie.setLocation(70,50);
         typeOfVeggie.setSelectedIndex(0);
         typeOfVeggie.addActionListener(this);
+        typeOfVeggie.setSelectedItem(veggies[0]);
+
 
         veggieStatsPer100g.setSize(150, 150);
         veggieStatsPer100g.setLocation(10, 100);
@@ -52,6 +54,11 @@ public class VeggiePick extends JFrame implements ActionListener{
         this.add(confirm);
         this.add(yourChoice);
         this.add(typeOfVeggie);
+    }
+
+    public String veggieReturn(){
+        String veggieChoice=yourChoice.getText();
+        return veggieChoice;
     }
 
     @Override
@@ -91,10 +98,12 @@ public class VeggiePick extends JFrame implements ActionListener{
                 yourChoice.setText("You chose: Turnip");
                 break;
         }
+        
         String pick=yourChoice.getText();
         FinalizationAndCalculation obj=new FinalizationAndCalculation();
         obj.myUpdateVeggie(pick);
         obj.setVisible(true);
-
+        obj.dispose();
         }
+
     }

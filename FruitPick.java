@@ -23,11 +23,13 @@ public class FruitPick extends JFrame implements ActionListener{
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLayout(null);
+        this.setResizable(false);
 
         typeOfFruit.setSize(100, 30);
         typeOfFruit.setLocation(70, 50);
         typeOfFruit.setSelectedIndex(0);
         typeOfFruit.addActionListener(this);
+        typeOfFruit.setSelectedItem(fruitType[0]);
 
         per100g.setSize(150,150);
         per100g.setLocation(10, 100);
@@ -54,7 +56,11 @@ public class FruitPick extends JFrame implements ActionListener{
         this.add(confirm);
         this.add(yourChoice);
     }
-
+    
+    public String fruitReturn(){
+        String fruitChoice=yourChoice.getText();
+        return fruitChoice;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -102,6 +108,8 @@ public class FruitPick extends JFrame implements ActionListener{
        FinalizationAndCalculation obj=new FinalizationAndCalculation();
        obj.myUpdateFruit(pick);
        obj.setVisible(true);
+       obj.dispose();
 
     }
+
 }
