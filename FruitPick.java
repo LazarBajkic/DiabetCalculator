@@ -57,10 +57,6 @@ public class FruitPick extends JFrame implements ActionListener{
         this.add(yourChoice);
     }
     
-    public String fruitReturn(){
-        String fruitChoice=yourChoice.getText();
-        return fruitChoice;
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

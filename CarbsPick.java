@@ -55,11 +55,6 @@ public class CarbsPick extends JFrame implements ActionListener{
         this.add(carbStats);
     }
 
-    public String carbReturn(){
-        String carbChoice=yourChoice.getText();
-        return carbChoice;
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
