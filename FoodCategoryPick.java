@@ -14,7 +14,6 @@ public class FoodCategoryPick extends JFrame implements ActionListener{
     JButton carbsBtn=new JButton();
     JButton sugarsBtn=new JButton();
     JButton meatBtn=new JButton();
-    JButton finalizeBtn=new JButton();
     JLabel optional=new JLabel();
     
 
@@ -75,22 +74,12 @@ public class FoodCategoryPick extends JFrame implements ActionListener{
         meatBtn.setForeground(Color.orange);
         meatBtn.addActionListener(this);
 
-        finalizeBtn.setSize(160,25);
-        finalizeBtn.setLocation(36, 350);
-        finalizeBtn.setFocusable(false);
-        finalizeBtn.setFont(new Font("Tahoma",Font.BOLD,11));
-        finalizeBtn.setText("Finalize and calculate");
-        finalizeBtn.setBackground(Color.black);
-        finalizeBtn.setForeground(Color.orange);
-        finalizeBtn.addActionListener(this);
-
         this.add(veggieBtn);
         this.add(fruitBtn);
         this.add(carbsBtn);
         this.add(optional);
         this.add(sugarsBtn);
         this.add(meatBtn);
-        this.add(finalizeBtn);
     }
 
     @Override
@@ -118,33 +107,6 @@ public class FoodCategoryPick extends JFrame implements ActionListener{
             else if(e.getSource()==meatBtn){
                 MeatPick MP=new MeatPick();
                 this.dispose();
-            }
-
-            else if(e.getSource()==finalizeBtn){
-                MeatPick MP=new MeatPick();
-                VeggiePick VP=new VeggiePick();
-                SugarsPick SP=new SugarsPick();
-                CarbsPick CP=new CarbsPick();
-                FruitPick FP=new FruitPick();
-                FinalizationAndCalculation FAC=new FinalizationAndCalculation();
-
-                String SC=SP.returnSugar();
-                String FC=FP.fruitReturn();
-                String MC=MP.ReturnMeat();
-                String VC=VP.veggieReturn();
-                String CC=CP.carbReturn();
-
-                FAC.myUpdateCarb(CC);
-                FAC.myUpdateFruit(FC);
-                FAC.myUpdateMeat(MC);
-                FAC.myUpdateSugar(SC);
-                FAC.myUpdateVeggie(VC);
-
-                FP.dispose();
-                CP.dispose();
-                SP.dispose();
-                VP.dispose();
-                MP.dispose();
             }
     }
 

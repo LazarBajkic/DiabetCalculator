@@ -88,11 +88,7 @@ public class MeatPick extends JFrame implements ActionListener{
         }
 
 
-        FinalizationAndCalculation obj=new FinalizationAndCalculation();
-        String pick=yourChoice.getText();
-        obj.myUpdateMeat(pick);
-        obj.setVisible(true);
-        obj.dispose();
+      
     }
     
     public String ReturnMeat(){

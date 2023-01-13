@@ -78,7 +78,7 @@ public class CarbsPick extends JFrame implements ActionListener{
         per100Grams.setText("<html>Per 100g:<br>Calories: 93<br>Fats: 0.1g<br>Cholesterol: 0mg<br>Sodium: 10mg<br>Potassium: 535mg<br>Carbs: 21g<br>Fiber: 2.2g<br>Sugars: 1.2g<br>Protein: 2.5g</html>");
         carbStats.setText("<html>Vitamins:<br>Iron: 1.1%<br>Vitamin A: 0%<br>Vitamin C: 0%<br>Calcium: 0.8%</html>");
         yourChoice.setText("You chose: Potatoes");
-        break;
+           break;
 
         case "Rice":
         per100Grams.setText("<html>Per 100g:<br>Calories: 130<br>Fats: 0.3g<br>Cholesterol: 0mg<br>Sodium: 1mg<br>Potassium: 35mg<br>Carbs: 28g<br>Fiber: 0.4g<br>Sugars: 0.1g<br>Protein: 2.7g</html>");
@@ -90,6 +90,7 @@ public class CarbsPick extends JFrame implements ActionListener{
         per100Grams.setText("<html>Per 100g:<br>Calories: 266<br>Fats: 3.3g<br>Cholesterol: 0mg<br>Sodium: 490mg<br>Potassium: 126mg<br>Carbs: 49g<br>Fiber: 2.7g<br>Sugars: 5.7g<br>Protein: 8.9g</html>");
         carbStats.setText("<html>Vitamins:<br>Iron: 20%<br>Vitamin A: 0%<br>Vitamin C: 0%<br>Calcium: 11%</html>");
         yourChoice.setText("You chose: Bread(White)");
+
         break;
 
         case "Bread(Wholemeal)":
@@ -111,11 +112,7 @@ public class CarbsPick extends JFrame implements ActionListener{
         break;
 
        }
-        String pick=yourChoice.getText();
-        FinalizationAndCalculation obj=new FinalizationAndCalculation();
-        obj.myUpdateCarb(pick);
-        obj.setVisible(true);
-        obj.dispose();
+      
     }
 }
 

@@ -77,12 +77,14 @@ public class FruitPick extends JFrame implements ActionListener{
         per100g.setText("<html>Per 100g: <br> Fat: 0.2g<br>Cholesterol: 0mg<br>Sodium: 1mg<br>Potassium: 107mg<br>Carbs: 14g<br>Fiber: 2.4g<br>Sugars: 10g<br>Protein: 0.3g</html>");
         fruitStats.setText("<html>Vitamins:<br>Iron: 0.7%<br>Vitamin A: 1.1%<br>Vitamin C: 7.7%<br>Calcium: 0.5%</html>");
         yourChoice.setText("You chose: Apple");
+    
         break;
         
         case "Orange":
         per100g.setText("<html>Per 100g: <br> Fat: 0.2g<br>Cholesterol: 0mg<br>Sodium: 1mg<br>Potassium: 166mg<br>Carbs: 13g<br>Fiber: 2.2g<br>Sugars: 8.5g<br>Protein: 0.9g</html>");
         fruitStats.setText("<html>Vitamins:<br>Iron: 0.7%<br>Vitamin A: 4.9%<br>Vitamin C: 99%<br>Calcium: 3.3%</html>");
         yourChoice.setText("You chose: Orange");
+
         break;
         
         case "Banana":
@@ -104,12 +106,7 @@ public class FruitPick extends JFrame implements ActionListener{
         break;
        }
 
-       String pick=yourChoice.getText();
-       FinalizationAndCalculation obj=new FinalizationAndCalculation();
-       obj.myUpdateFruit(pick);
-       obj.setVisible(true);
-       obj.dispose();
-
+       
     }
 
 }
