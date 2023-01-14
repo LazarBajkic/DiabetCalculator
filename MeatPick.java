@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 
 public class MeatPick extends JFrame implements ActionListener{
     
-    String [] meatType={"Chicken","Beef","Fish"};
+    String [] meatType={"Select","Chicken","Beef","Fish"};
     JComboBox typeOfMeat=new JComboBox(meatType);
     JLabel per100g=new JLabel();
     JLabel meatStats=new JLabel();
@@ -33,7 +33,6 @@ public class MeatPick extends JFrame implements ActionListener{
         typeOfMeat.setLocation(70,50);
         typeOfMeat.addActionListener(this);
         typeOfMeat.setSelectedIndex(0);
-        typeOfMeat.setSelectedItem(0);
 
         per100g.setSize(150,150);
         per100g.setFont(new Font("Tahoma",Font.BOLD,12));

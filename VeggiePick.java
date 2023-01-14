@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 
 public class VeggiePick extends JFrame implements ActionListener{
     
-    String[] veggies={"Cucumber","Tomato","Olives","Turnip"};
+    String[] veggies={"Select","Cucumber","Tomato","Olives","Turnip"};
     JComboBox typeOfVeggie=new JComboBox(veggies);
     JLabel veggieStatsPer100g=new JLabel();
     JLabel veggieVitaminInfo=new JLabel();
@@ -35,8 +35,6 @@ public class VeggiePick extends JFrame implements ActionListener{
         typeOfVeggie.setLocation(70,50);
         typeOfVeggie.setSelectedIndex(0);
         typeOfVeggie.addActionListener(this);
-        typeOfVeggie.setSelectedItem(veggies[0]);
-
 
         veggieStatsPer100g.setSize(150, 150);
         veggieStatsPer100g.setLocation(10, 100);
